@@ -41,7 +41,7 @@ public class ClienteController {
         return this.service.findAll();
     }
 
-    @GetMapping("/cliente/{id}/byId")
+    @GetMapping("/cliente/{id}/byFindId")
     private Mono<Cliente> findByid(@PathVariable("id") String id) {
         return this.service.findById(id);
     }

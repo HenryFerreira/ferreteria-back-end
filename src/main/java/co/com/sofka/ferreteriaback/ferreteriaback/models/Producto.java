@@ -5,7 +5,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.UUID;
 
-@Document(collection = "producto")
+@Document(collection = "inventario")
 public class Producto {
     @Id
     private String productoID = UUID.randomUUID().toString().substring(0, 10);

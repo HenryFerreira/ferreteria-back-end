@@ -40,7 +40,7 @@ public class FacturaController {
         return this.service.findAll();
     }
 
-    @GetMapping("/factura/{id}/byId")
+    @GetMapping("/factura/{id}/byFindId")
     private Mono<Factura> findByid(@PathVariable("id") String id) {
         return this.service.findById(id);
     }

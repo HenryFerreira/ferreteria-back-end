@@ -40,7 +40,7 @@ public class ProveedorController {
         return this.service.findAll();
     }
 
-    @GetMapping("/proveedor/{id}/byId")
+    @GetMapping("/proveedor/{id}/byFindId")
     private Mono<Proveedor> findById(@PathVariable("id") String id) {
         return this.service.findById(id);
     }
