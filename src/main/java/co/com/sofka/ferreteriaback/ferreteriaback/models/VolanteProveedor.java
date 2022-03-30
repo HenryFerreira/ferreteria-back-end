@@ -16,6 +16,14 @@ public class VolanteProveedor {
     private Date fecha;//Fecha
     private String documentoIdentidadProveedor;//Documento de identificación del proveedor
 
+    public String volanteProveedorID() {
+        return volanteProveedorID;
+    }
+
+    public void setVolanteProveedorID(String volanteProveedorID) {
+        this.volanteProveedorID = volanteProveedorID;
+    }
+
     public String nombreProveedor() {
         return nombreProveedor;
     }
