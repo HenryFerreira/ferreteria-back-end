@@ -44,4 +44,14 @@ public class Proveedor {
     public void setDocumentoIdentidad(String documentoIdentidad) {
         this.documentoIdentidad = documentoIdentidad;
     }
+
+    @Override
+    public String toString() {
+        return "Proveedor{" +
+                "proveedorID='" + proveedorID + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", celular='" + celular + '\'' +
+                ", documentoIdentidad='" + documentoIdentidad + '\'' +
+                '}';
+    }
 }

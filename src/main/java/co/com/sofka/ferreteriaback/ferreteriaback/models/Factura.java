@@ -64,4 +64,16 @@ public class Factura {
     public void setPrecioTotal(Double precioTotal) {
         this.precioTotal = precioTotal;
     }
+
+    @Override
+    public String toString() {
+        return "Factura{" +
+                "facturaID='" + facturaID + '\'' +
+                ", feche=" + feche +
+                ", nombreCliente='" + nombreCliente + '\'' +
+                ", nombreAtendio='" + nombreAtendio + '\'' +
+                ", productos=" + productos +
+                ", precioTotal=" + precioTotal +
+                '}';
+    }
 }

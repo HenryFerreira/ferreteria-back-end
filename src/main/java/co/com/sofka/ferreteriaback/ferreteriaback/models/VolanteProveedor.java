@@ -55,4 +55,15 @@ public class VolanteProveedor {
     public void setDocumentoIdentidadProveedor(String documentoIdentidadProveedor) {
         this.documentoIdentidadProveedor = documentoIdentidadProveedor;
     }
+
+    @Override
+    public String toString() {
+        return "VolanteProveedor{" +
+                "volanteProveedorID='" + volanteProveedorID + '\'' +
+                ", nombreProveedor='" + nombreProveedor + '\'' +
+                ", productos=" + productos +
+                ", fecha=" + fecha +
+                ", documentoIdentidadProveedor='" + documentoIdentidadProveedor + '\'' +
+                '}';
+    }
 }

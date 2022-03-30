@@ -44,4 +44,14 @@ public class Cliente {
     public void setDocumentoIdentidad(String documentoIdentidad) {
         this.documentoIdentidad = documentoIdentidad;
     }
+
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "clienteID='" + clienteID + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", celular='" + celular + '\'' +
+                ", documentoIdentidad='" + documentoIdentidad + '\'' +
+                '}';
+    }
 }
