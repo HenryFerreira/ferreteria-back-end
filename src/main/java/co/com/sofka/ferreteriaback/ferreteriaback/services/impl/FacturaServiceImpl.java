@@ -29,7 +29,7 @@ public class FacturaServiceImpl implements FacturaService {
     @Override
     public Mono<Factura> update(String id, Factura factura) {
         return this.repository.findById(id)
-                .flatMap(citasDTOReactiva1 -> {
+                .flatMap(factura1 -> {
                     factura.setFacturaID(id);
                     return save(factura);
                 })

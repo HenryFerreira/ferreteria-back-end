@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
-@CrossOrigin(origins = "http://localhost:8080")
+@CrossOrigin(origins = "*")
 @RestController
 public class VolanteProveedorController {
     @Autowired
@@ -40,7 +40,7 @@ public class VolanteProveedorController {
         return this.service.findAll();
     }
 
-    @GetMapping("/volante/{id}/byFindId")
+    @GetMapping("/volante/{id}/findById")
     private Mono<VolanteProveedor> findById(@PathVariable("id") String id) {
         return this.service.findById(id);
     }

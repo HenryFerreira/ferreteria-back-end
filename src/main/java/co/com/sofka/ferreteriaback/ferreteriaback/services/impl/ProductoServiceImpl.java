@@ -27,11 +27,11 @@ public class ProductoServiceImpl implements ProductoService {
     }
 
     @Override
-    public Mono<Producto> update(String id, Producto factura) {
+    public Mono<Producto> update(String id, Producto producto) {
         return this.repository.findById(id)
-                .flatMap(citasDTOReactiva1 -> {
-                    factura.setProductoID(id);
-                    return save(factura);
+                .flatMap(producto1 -> {
+                    producto.setProductoID(id);
+                    return save(producto);
                 })
                 .switchIfEmpty(Mono.empty());
     }

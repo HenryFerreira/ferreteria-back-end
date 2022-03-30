@@ -13,6 +13,17 @@ public class Cliente {
     private String celular;
     private String documentoIdentidad;
 
+    public Cliente() {
+    }
+
+    public Cliente(String clienteID, String nombre, String celular, String documentoIdentidad) {
+        this.clienteID = clienteID;
+        this.nombre = nombre;
+        this.celular = celular;
+        this.documentoIdentidad = documentoIdentidad;
+    }
+
+
     public String clienteID() {
         return clienteID;
     }

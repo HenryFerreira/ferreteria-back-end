@@ -29,7 +29,7 @@ public class VolanteProveedorServiceImpl implements VolanteProveedorService {
     @Override
     public Mono<VolanteProveedor> update(String id, VolanteProveedor volanteProveedor) {
         return this.repository.findById(id)
-                .flatMap(citasDTOReactiva1 -> {
+                .flatMap(volanteProveedor1 -> {
                     volanteProveedor.setVolanteProveedorID(id);
                     return save(volanteProveedor);
                 })
