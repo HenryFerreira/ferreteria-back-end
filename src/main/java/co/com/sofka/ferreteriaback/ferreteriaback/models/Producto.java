@@ -12,7 +12,7 @@ public class Producto {
     private String nombre;
     private Double precio;
 
-    public String productoID() {
+    public String getProductoID() {
         return productoID;
     }
 
@@ -20,7 +20,7 @@ public class Producto {
         this.productoID = productoID;
     }
 
-    public String nombre() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -28,7 +28,7 @@ public class Producto {
         this.nombre = nombre;
     }
 
-    public Double precio() {
+    public Double getPrecio() {
         return precio;
     }
 

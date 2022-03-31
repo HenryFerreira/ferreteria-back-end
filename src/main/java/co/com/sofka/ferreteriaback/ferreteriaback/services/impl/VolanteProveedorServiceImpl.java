@@ -23,7 +23,7 @@ public class VolanteProveedorServiceImpl implements VolanteProveedorService {
     public Mono<VolanteProveedor> delete(String id) {
         return this.repository
                 .findById(id)
-                .flatMap(p -> this.repository.deleteById(p.volanteProveedorID()).thenReturn(p));
+                .flatMap(p -> this.repository.deleteById(p.getVolanteProveedorID()).thenReturn(p));
     }
 
     @Override

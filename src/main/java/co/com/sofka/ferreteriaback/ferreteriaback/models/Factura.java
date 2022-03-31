@@ -33,7 +33,15 @@ public class Factura {
         this.feche = feche;
     }
 
-    public String nombreCliente() {
+    public String getFacturaID() {
+        return facturaID;
+    }
+
+    public Date getFeche() {
+        return feche;
+    }
+
+    public String getNombreCliente() {
         return nombreCliente;
     }
 
@@ -41,7 +49,7 @@ public class Factura {
         this.nombreCliente = nombreCliente;
     }
 
-    public String nombreAtendio() {
+    public String getNombreAtendio() {
         return nombreAtendio;
     }
 
@@ -49,7 +57,7 @@ public class Factura {
         this.nombreAtendio = nombreAtendio;
     }
 
-    public List<Producto> productos() {
+    public List<Producto> getProductos() {
         return productos;
     }
 
@@ -57,7 +65,7 @@ public class Factura {
         this.productos = productos;
     }
 
-    public Double precioTotal() {
+    public Double getPrecioTotal() {
         return precioTotal;
     }
 

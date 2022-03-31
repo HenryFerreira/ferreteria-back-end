@@ -16,7 +16,7 @@ public class VolanteProveedor {
     private Date fecha;//Fecha
     private String documentoIdentidadProveedor;//Documento de identificación del proveedor
 
-    public String volanteProveedorID() {
+    public String getVolanteProveedorID() {
         return volanteProveedorID;
     }
 
@@ -24,7 +24,7 @@ public class VolanteProveedor {
         this.volanteProveedorID = volanteProveedorID;
     }
 
-    public String nombreProveedor() {
+    public String getNombreProveedor() {
         return nombreProveedor;
     }
 
@@ -32,7 +32,7 @@ public class VolanteProveedor {
         this.nombreProveedor = nombreProveedor;
     }
 
-    public List<Producto> productos() {
+    public List<Producto> getProductos() {
         return productos;
     }
 
@@ -40,7 +40,7 @@ public class VolanteProveedor {
         this.productos = productos;
     }
 
-    public Date fecha() {
+    public Date getFecha() {
         return fecha;
     }
 
@@ -48,7 +48,7 @@ public class VolanteProveedor {
         this.fecha = fecha;
     }
 
-    public String documentoIdentidadProveedor() {
+    public String getDocumentoIdentidadProveedor() {
         return documentoIdentidadProveedor;
     }
 

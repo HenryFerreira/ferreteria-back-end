@@ -23,7 +23,7 @@ public class ProveedorServiceImpl implements ProveedorService {
     public Mono<Proveedor> delete(String id) {
         return this.repository
                 .findById(id)
-                .flatMap(p -> this.repository.deleteById(p.proveedorID()).thenReturn(p));
+                .flatMap(p -> this.repository.deleteById(p.getProveedorID()).thenReturn(p));
     }
 
     @Override

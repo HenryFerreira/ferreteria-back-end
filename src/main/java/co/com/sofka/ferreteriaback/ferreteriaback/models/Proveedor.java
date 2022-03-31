@@ -13,7 +13,7 @@ public class Proveedor {
     private String celular;
     private String documentoIdentidad;
 
-    public String proveedorID() {
+    public String getProveedorID() {
         return proveedorID;
     }
 
@@ -21,7 +21,7 @@ public class Proveedor {
         this.proveedorID = proveedorID;
     }
 
-    public String nombre() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -29,7 +29,7 @@ public class Proveedor {
         this.nombre = nombre;
     }
 
-    public String celular() {
+    public String getCelular() {
         return celular;
     }
 
@@ -37,7 +37,7 @@ public class Proveedor {
         this.celular = celular;
     }
 
-    public String documentoIdentidad() {
+    public String getDocumentoIdentidad() {
         return documentoIdentidad;
     }
 

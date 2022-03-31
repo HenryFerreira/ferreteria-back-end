@@ -24,7 +24,7 @@ public class Cliente {
     }
 
 
-    public String clienteID() {
+    public String getClienteID() {
         return clienteID;
     }
 
@@ -32,7 +32,7 @@ public class Cliente {
         this.clienteID = clienteID;
     }
 
-    public String nombre() {
+    public String getNombre() {
         return nombre;
     }
 
@@ -40,7 +40,7 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    public String celular() {
+    public String getCelular() {
         return celular;
     }
 
@@ -48,7 +48,7 @@ public class Cliente {
         this.celular = celular;
     }
 
-    public String documentoIdentidad() {
+    public String getDocumentoIdentidad() {
         return documentoIdentidad;
     }
 
