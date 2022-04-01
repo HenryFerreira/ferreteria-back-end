@@ -11,6 +11,15 @@ public class Producto {
     private String productoID = UUID.randomUUID().toString().substring(0, 10);
     private String nombre;
     private Double precio;
+    private Proveedor proveedor;
+
+    public Proveedor getProveedor() {
+        return proveedor;
+    }
+
+    public void setProveedor(Proveedor proveedor) {
+        this.proveedor = proveedor;
+    }
 
     public String getProductoID() {
         return productoID;
