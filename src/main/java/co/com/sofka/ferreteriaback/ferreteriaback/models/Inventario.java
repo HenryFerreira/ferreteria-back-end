@@ -12,15 +12,17 @@ public class Inventario {
     private String inventarioID = UUID.randomUUID().toString().substring(0, 10);
     private List<Producto> productos;
     private Long cantMaxima;
+    private Long cantidad;
     private Long CantMinima;
 
     public Inventario() {
     }
 
-    public Inventario(String inventarioID, List<Producto> productos, Long cantMaxima, Long cantMinima) {
+    public Inventario(String inventarioID, List<Producto> productos, Long cantMaxima, Long cantidad, Long cantMinima) {
         this.inventarioID = inventarioID;
         this.productos = productos;
         this.cantMaxima = cantMaxima;
+        this.cantidad = cantidad;
         CantMinima = cantMinima;
     }
 
@@ -54,5 +56,13 @@ public class Inventario {
 
     public void setCantMinima(Long cantMinima) {
         CantMinima = cantMinima;
+    }
+
+    public Long getCantidad() {
+        return cantidad;
+    }
+
+    public void setCantidad(Long cantidad) {
+        this.cantidad = cantidad;
     }
 }
