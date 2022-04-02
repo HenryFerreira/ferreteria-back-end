@@ -29,10 +29,10 @@ public class ProductoController {
     }
 
     @PutMapping("/inventario/{id}")
-    private Mono<ResponseEntity<Producto>> update(@PathVariable("id") String id, @RequestBody Producto producto) {
+    private Mono<Producto> update(@PathVariable("id") String id, @RequestBody Producto producto) {
         return this.service.update(id, producto)
-                .flatMap(producto1 -> Mono.just(ResponseEntity.ok(producto1)))
-                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+                .flatMap(producto1 -> Mono.just((producto1)))
+                .switchIfEmpty(Mono.empty());
     }
 
     @GetMapping(value = "/inventario")

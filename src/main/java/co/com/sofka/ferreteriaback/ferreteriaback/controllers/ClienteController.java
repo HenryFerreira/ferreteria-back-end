@@ -22,17 +22,17 @@ public class ClienteController {
     }
 
     @DeleteMapping("/cliente/{id}")
-    private Mono<ResponseEntity<Cliente>> delete(@PathVariable("id") String id) {
+    private Mono<Cliente> delete(@PathVariable("id") String id) {
         return this.service.delete(id)
-                .flatMap(cliente -> Mono.just(ResponseEntity.ok(cliente)))
-                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+                .flatMap(cliente -> Mono.just((cliente)))
+                .switchIfEmpty(Mono.empty());
     }
 
     @PutMapping("/cliente/{id}")
-    private Mono<ResponseEntity<Cliente>> update(@PathVariable("id") String id, @RequestBody Cliente cliente) {
+    private Mono<Cliente> update(@PathVariable("id") String id, @RequestBody Cliente cliente) {
         return this.service.update(id, cliente)
-                .flatMap(cliente1 -> Mono.just(ResponseEntity.ok(cliente1)))
-                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+                .flatMap(cliente1 -> Mono.just((cliente1)))
+                .switchIfEmpty(Mono.empty());
 
     }
 

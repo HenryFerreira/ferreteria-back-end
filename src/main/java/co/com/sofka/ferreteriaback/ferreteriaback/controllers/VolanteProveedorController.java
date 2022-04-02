@@ -22,10 +22,10 @@ public class VolanteProveedorController {
     }
 
     @DeleteMapping("/volante/{id}")
-    private Mono<ResponseEntity<VolanteProveedor>> delete(@PathVariable("id") String id) {
+    private Mono<VolanteProveedor> delete(@PathVariable("id") String id) {
         return this.service.delete(id)
-                .flatMap(volanteProveedor -> Mono.just(ResponseEntity.ok(volanteProveedor)))
-                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+                .flatMap(volanteProveedor -> Mono.just((volanteProveedor)))
+                .switchIfEmpty(Mono.empty());
     }
 
     @PutMapping("/volante/{id}")

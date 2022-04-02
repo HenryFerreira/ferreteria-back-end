@@ -22,10 +22,10 @@ public class InventarioController {
     }
 
     @DeleteMapping("/inventarioProductos/{id}")
-    private Mono<ResponseEntity<Inventario>> delete(@PathVariable("id") String id) {
+    private Mono<Inventario> delete(@PathVariable("id") String id) {
         return this.service.delete(id)
-                .flatMap(inventario -> Mono.just(ResponseEntity.ok(inventario)))
-                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+                .flatMap(inventario -> Mono.just((inventario)))
+                .switchIfEmpty(Mono.empty());
     }
 
     @PutMapping("/inventarioProductos/{id}")

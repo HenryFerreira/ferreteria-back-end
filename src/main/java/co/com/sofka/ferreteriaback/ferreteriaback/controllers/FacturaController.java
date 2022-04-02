@@ -29,10 +29,10 @@ public class FacturaController {
     }
 
     @PutMapping("/factura/{id}")
-    private Mono<ResponseEntity<Factura>> update(@PathVariable("id") String id, @RequestBody Factura factura) {
+    private Mono<Factura> update(@PathVariable("id") String id, @RequestBody Factura factura) {
         return this.service.update(id, factura)
-                .flatMap(factura1 -> Mono.just(ResponseEntity.ok(factura1)))
-                .switchIfEmpty(Mono.just(ResponseEntity.notFound().build()));
+                .flatMap(factura1 -> Mono.just((factura1)))
+                .switchIfEmpty(Mono.empty());
     }
 
     @GetMapping(value = "/factura")
